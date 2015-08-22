@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%=
+    metamagic og: {
+                site_name: "gnotov.com",
+                url: "#{request.original_url}",
+                type: "website",
+                image: "#{image_url('logo.png')}"
+                }
+  %>
+
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+
+  <%= favicon_link_tag %>
+
+  <%= csrf_meta_tags %>
+
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <a href="#0" class="cd-top">Top</a>
+  <a href="#1" class="cd-top-envelope">Contacts</a>
+
+  <section id="navigation">
+    <div class="container">
+      <nav id="wow-menu" class="navbar on">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <ul class="nav navbar-nav navbar-right locale_navbar_mobile">
+            <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
+            <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
+            <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
+          </ul>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="col-sm-12">
+          <div class="col-sm-4 logo_container">
+            <%= link_to "/" do %>
+              <%= image_tag "logo.png", class: "img-responsive", alt: "gnotov.com" %>
+            <% end %>
+          </div>
+
+          <div class="col-sm-5 collapsed_menu_container">
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse text-center">
+              <div class="btn-group">
+                <ul id="menu-top" class="nav navbar-nav navbar-left">
+                  <li><%= link_to t('home').html_safe, root_path, class: "#{params[:action] == 'index' ? 'active' : ''}" %></li>
+                  <li><%= link_to t('works'), portfolio_path, class: "#{params[:action] == 'works' ? 'active' : ''}" %></li>
+                  <li><%= link_to t('contacts'), contacts_path, class: "#{params[:action] == 'contacts' ? 'active' : ''}" %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3 locale_navbar_container">
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse ">
+              <ul class="nav navbar-nav navbar-right locale_navbar">
+                <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
+                <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
+                <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <%= yield %>
+
+  <!-- Contact Us -->
+  <section id="contacts">
+    <div class="container">
+      <div class="col-sm-12 text-center">
+        <h2><%= t('contact_us') %></h2>
+      </div>
+      <div class="col-sm-12 text-center">
+        <div class="btn-group contact_form_container">
+          <div class="col-sm-10 col-sm-offset-1">
+            <%= simple_form_for @message, url: new_contact_message_path, remote: true do |f| %>
+              <%= f.input :trigger_button, input_html: { value: t('contact_form'), class: "contact_trigger", name: "trigger_button" }, as: :hidden %>
+              <%= f.input :referrer, input_html: { value: session[:refererral_user], class: "referrer", name: "referrer" }, as: :hidden %>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="emailaddress"><%= t('email') %></label>
+                  <%= f.input :email, label: false, :input_html => { class: "form-control form_email", placeholder: t('email'), type: "email", name: "email" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="messagearea"><%= t('message') %></label>
+                  <%= f.input :message, label: false, :input_html => { class: "form-control form_message", placeholder: t('message'), rows: 3, name: "message" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <button type="submit" name="submitButton" class="btn btn-custom btn-default"><%= t('send') %></button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container">
+      <footer>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center socials_list">
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-instagram"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-facebook"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-pinterest"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-vk"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="footer_made_by">
+              Разработка сайта: <a href="http://gnotov.com/ru/contacts">gnotov.<span>com</span></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <div class="modal fade" id="worker_modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="modal_close_button" data-dismiss="modal"></span>
+          <!-- The form is placed inside the body of modal -->
+          <div class="col-sm-12 text-center">
+            <h2 class="modal_heading"><%= t('write_to_worker') %></h2>
+          </div>
+          <div class="col-sm-6">
+            <%= image_tag "man_modal.png", class: "img-responsive man_image" %>
+          </div>
+          <div class="col-sm-6">
+            <%= simple_form_for @message, url: new_contact_message_path, remote: true do |f| %>
+              <%= f.input :trigger_button, input_html: { class: "modal_trigger", name: "trigger_button" }, as: :hidden %>
+              <%= f.input :referrer, input_html: { value: session[:refererral_user], class: "referrer", name: "referrer" }, as: :hidden %>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="emailaddress"><%= t('email') %></label>
+                  <%= f.input :email, label: false, :input_html => { class: "form-control form_email", placeholder: t('email'), type: "email", name: "email" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="messagearea"><%= t('message') %></label>
+                  <%= f.input :message, label: false, :input_html => { class: "form-control form_message", placeholder: t('message'), rows: 3, name: "message" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <button type="submit" name="submitButton" class="btn btn-custom btn-default"><%= t('send') %></button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="magical_modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="modal_close_button" data-dismiss="modal"></span>
+          <!-- The form is placed inside the body of modal -->
+          <div class="col-sm-12 text-center">
+            <h2 class="modal_heading"><%= t('magical_form') %></h2>
+            <div class="modal_thanks_soon">
+              <%= t('magical_text') %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <%= image_tag "man_magic.png", class: "img-responsive man_image" %>
+          </div>
+          <div class="col-sm-6">
+            <%= simple_form_for @message, url: new_contact_message_path, remote: true do |f| %>
+              <%= f.input :trigger_button, input_html: { class: "modal_trigger", name: "trigger_button" }, as: :hidden %>
+              <%= f.input :referrer, input_html: { value: session[:refererral_user], class: "referrer", name: "referrer" }, as: :hidden %>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="emailaddress"><%= t('email') %></label>
+                  <%= f.input :email, label: false, :input_html => { class: "form-control form_email", placeholder: t('email'), type: "email", name: "email" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="messagearea"><%= t('message') %></label>
+                  <%= f.input :message, label: false, :input_html => { class: "form-control form_message", placeholder: t('message'), rows: 3, name: "message" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <button type="submit" name="submitButton" class="btn btn-custom btn-default"><%= t('send') %></button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="thank_you_modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="modal_close_button" data-dismiss="modal"></span>
+          <!-- The form is placed inside the body of modal -->
+          <div class="col-sm-12 row">
+            <div class="col-sm-12 text-center">
+              <h2 class="text-center"><%= t('thanks_for_application') %></h2>
+              <div class="modal_thanks_soon">
+                <%= t('we_will_respond_soon') %>
+              </div>
+            </div>
+            <div class="col-sm-12 modal_form_container">
+              <%= image_tag "man_modal.png", class: "img-responsive man_image" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= javascript_include_tag 'application' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36198715-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<%
+  meta title: "#{t('contacts_title')}",
+       description: "#{t('contacts_desctiption')}",
+       og: {
+        title: "#{t('contacts_title')}",
+        description: "#{t('contacts_desctiption')}"
+       }
+%>
+
+<section id="greeting">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="col-sm-5 vcenter top_image">
+        <%= image_tag "man_hi.png", class: "img-responsive man_image" %>
+      </div>
+      <div class="col-sm-7 vcenter top_heading">
+        <%= t('contacts_heading').html_safe %>
+      </div>
+    </div>
+  </div>
+</section>

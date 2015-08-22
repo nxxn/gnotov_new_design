@@ -1,0 +1,271 @@
+<%
+  meta title: "#{t('home_title')}",
+       description: "#{t('home_description')}",
+       og: {
+        title: "#{t('home_title')}",
+        description: "#{t('home_description')}"
+       }
+%>
+
+<section id="greeting">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="col-sm-4 vcenter top_image">
+        <%= image_tag "man_hi.png", class: "img-responsive man_image" %>
+      </div>
+      <div class="col-sm-8 vcenter top_heading">
+        <%= t('heading').html_safe %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about_us">
+  <div class="container">
+
+    <div class="col-sm-12 text-center">
+      <h2><%= t('our_team') %></h2>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center team_description">
+      <h1><%= t('team_description') %></h1>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="col-sm-4 text-center worker first_worker">
+        <div class="col-sm-12">
+          <%= image_tag "test_avatar.jpg", class: "img-responsive man_image" %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <strong><%= t('nikita') %></strong>
+          <br>
+          <%= t('programmer').html_safe %>
+        </div>
+        <div class="col-sm-12">
+          <div class="btn-group">
+            <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('write_to_nikita') %>"><%= t('write_to_worker') %></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center worker">
+        <div class="col-sm-12">
+          <%= image_tag "test_avatar.jpg", class: "img-responsive man_image" %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <strong><%= t('tonya') %></strong>
+          <br>
+          <%= t('designer').html_safe %>
+        </div>
+        <div class="col-sm-12">
+          <div class="btn-group">
+            <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('write_to_tonya') %>"><%= t('write_to_worker') %></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-center worker last_worker">
+        <div class="col-sm-12">
+          <%= image_tag "test_avatar.jpg", class: "img-responsive man_image" %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <strong><%= t('alina') %></strong>
+          <br>
+          <%= t('marketing').html_safe %>
+        </div>
+        <div class="col-sm-12">
+          <div class="btn-group">
+            <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('write_to_alina') %>"><%= t('write_to_worker') %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problems">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h2><%= t('problems_heading') %></h2>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+
+      <div class="col-sm-4 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_1') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_2') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_3') %>
+        </div>
+      </div>
+
+      <div class="col-sm-4 vcenter problems_block">
+        <%= image_tag "man_problem.png", class: "img-responsive man_image" %>
+      </div>
+
+      <div class="col-sm-4 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_4') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_5') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <%= t('problem_6') %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center small_top_margin">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('solve_problems') %>"><span><%= t('solve_problems') %></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="big_green_divider">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal magical_button wow pulse" href="#" data-toggle="modal" data-target="#magical_modal" data-trigger="<%= t('magical_form') %>" data-wow-delay="2s"><%= t('magical_button') %></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h2><%= t('solution_heading') %></h2>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+
+      <div class="col-sm-4 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_1') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_2') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_3') %>
+        </div>
+      </div>
+
+      <div class="col-sm-4 vcenter problems_block">
+        <%= image_tag "man_solution.png", class: "img-responsive man_image" %>
+      </div>
+
+      <div class="col-sm-4 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_4') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_5') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('solution_6') %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center small_top_margin">
+      <div class="col-sm-12">
+        <p class="solution_not_found">
+          <%= t('not_found_solution') %>
+          <br>
+          <%= t('leave_application_for_solution') %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('leave_application') %>"><span><%= t('leave_application') %></span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h2><%= t('works_heading') %></h2>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <% @works.each_slice(2) do |slice| -%>
+        <div class="row small_top_margin work_row">
+          <% slice.each do |work| -%>
+            <div class="col-sm-6 work_container">
+              <div class="col-sm-12">
+
+                <%= link_to work.work_image.url(:original), class: "folio-detail fancybox", rel: "lightbox" do %>
+
+                  <div id="isotope_container" class="isotope text-center">
+                    <div class="btn-group">
+                      <div class="isotope-item gallery-item brand">
+                        <div class="gallery-image portfolio-content">
+                          <%= image_tag work.work_image(:medium), class: "img-responsive work_image", alt: "#{work.title}" %>
+                          <div class="overlay text-center">
+                            <i class="fa fa-search-plus folio-detail"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <% end %>
+
+              </div>
+
+              <div class="col-sm-12 regular_text work_title">
+                <strong><%= work.title %></strong>
+              </div>
+              <div class="col-sm-12 regular_text work_department">
+                <%= work.department %>
+              </div>
+              <div class="col-sm-12 regular_text work_description">
+                <%= work.description %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
