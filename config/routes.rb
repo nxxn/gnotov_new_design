@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   scope "(:locale)", :locale => /en|ru|lv/ do
     get '/portfolio', to: 'home#works'
     get '/contacts', to: 'home#contacts'
+    get '/services', to: 'home#services'
 
     root to: "home#index"
   end

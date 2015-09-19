@@ -11,13 +11,16 @@
   <div class="container">
     <div class="col-sm-12 text-center">
       <h1><%= t('works_heading') %></h1>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
     </div>
 
     <div class="col-sm-12">
       <% @works.each_slice(2) do |slice| -%>
-        <div class="row small_top_margin">
+        <div class="row work_row">
           <% slice.each do |work| -%>
-            <div class="col-sm-6">
+            <div class="col-sm-6 work_container">
               <div class="col-sm-12">
 
                 <%= link_to work.work_image.url(:original), class: "folio-detail fancybox", rel: "lightbox" do %>
@@ -45,8 +48,13 @@
               <div class="col-sm-12 regular_text work_department">
                 <%= work.department %>
               </div>
-              <div class="col-sm-12 regular_text work_description">
+              <!-- <div class="col-sm-12 regular_text work_description">
                 <%= work.description %>
+              </div> -->
+              <div class="col-sm-12 text-center">
+                <div class="btn-group">
+                  <%= link_to t('take_a_look'), "http://#{work.url}", class: "btn btn-default btn-custom button_for_modal"  %>
+                </div>
               </div>
             </div>
           <% end %>

@@ -89,6 +89,11 @@ p {
   margin-top: 40px;
 }
 
+.half_small_top_margin {
+  margin-top: 20px;
+}
+
+
 // End default styles
 
 // Navigation start
@@ -167,7 +172,7 @@ nav .navbar-toggle .icon-bar {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .collapsed_menu_container {
-    width: 60%;
+    width: 72%;
   }
 
   .collapsed_menu_container .btn-group {
@@ -175,9 +180,20 @@ nav .navbar-toggle .icon-bar {
   }
 
   .locale_navbar_container {
-    width: 40%;
+    width: 28%;
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .collapsed_menu_container {
+    width: 54%;
+  }
+
+  .locale_navbar_container {
+    width: 21%;
+  }
+}
+
 
 @media (min-width: 768px) {
   #navigation .container {
@@ -203,6 +219,14 @@ nav .navbar-toggle .icon-bar {
 #about_us img {
   border-radius: 50%;
   height: 150px;
+}
+
+#about_us .our_team_heading {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
 }
 
 @media (max-width: 768px) {
@@ -260,7 +284,7 @@ nav .navbar-toggle .icon-bar {
   line-height: 1.4;
 }
 
-#solution .solution_not_found {
+.solution_not_found {
   font-size: 21px;
   font-weight: 300;
   line-height: 1.4;
@@ -531,6 +555,21 @@ portfolio
   font-weight: bold;
 }
 
+#portfolio .portfolio_example {
+  width: calc(50% - 20px);
+  margin: 30px 10px 0;
+  // border: 1px solid #ccc;
+  padding: 15px 0;
+}
+
+#portfolio .portfolio_examples_row {
+  display: table-cell;
+}
+
+#portfolio .work_row {
+  margin-bottom: 60px;
+}
+
 @media (max-width: 1199px) {
   #portfolio .overlay .folio-detail .fa {
     font-size: 30px;
@@ -563,11 +602,22 @@ portfolio
 }
 
 #contacts h2 {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
-#portfolio.portfolio_page {
-  background-color: #fff;
+#contacts .contacts_email {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+#contacts .contacts_email a {
+  color: #fff;
+}
+
+#contacts .contacts_email a:hover {
+  color: #37b34a;
+  text-decoration: none;
 }
 
 // Portfolio end
@@ -833,4 +883,12 @@ footer .copyright {
   font-weight: 500;
   color: #37b34a;
   margin-bottom: 20px;
+}
+
+#promotion_service h2, #development_service h2, #audit_service h2 {
+  margin-bottom: 30px;
+}
+
+#development_service {
+  background-color: #f5f5f5;
 }

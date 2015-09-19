@@ -1,7 +1,7 @@
 class Admin::WorksController < AdminController
 
   def index
-    @works = Work.all.order("created_at DESC")
+    @works = Work.all.order("order_number ASC")
   end
 
   def show

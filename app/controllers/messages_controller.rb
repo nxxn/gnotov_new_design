@@ -4,12 +4,10 @@ class MessagesController < ApplicationController
     @message = Message.new(contact_form_params)
     @message.status = "Sent"
 
-    ap @message
-
     if @message.save
-      ap "wrewr"
       ContactFormMailer.new_contact_form_message(@message).deliver_later
-      render :nothing => true, :status => 200, :content_type => 'text/html'
+      #ContactFormMailer.auto_message_to_client(params[:email], I18n.locale.to_s).deliver_later
+      render :js=>"$('.new_message')[0].reset();"
     end
 
   end

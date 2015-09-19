@@ -1,0 +1,184 @@
+<%
+  meta title: "#{t('services_title')}",
+       description: "#{t('services_desctiption')}",
+       og: {
+        title: "#{t('services_title')}",
+        description: "#{t('services_desctiption')}"
+       }
+%>
+
+<section id="promotion_service">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h1><%= t('service_heading') %></h1>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+      <h2><%= t('promotion_heading') %></h2>
+    </div>
+
+    <div class="col-sm-12">
+
+      <div class="col-sm-4 vcenter problems_block">
+        <%= image_tag "man_solution.png", class: "img-responsive man_image" %>
+      </div>
+
+      <div class="col-sm-8 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_1') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_2') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_3') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_4') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_5') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_6') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('promotion_service_7') %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center small_top_margin">
+      <div class="col-sm-12">
+        <p class="solution_not_found">
+          <%= t('not_found_solution') %>
+          <br>
+          <%= t('leave_application_for_solution') %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('leave_application') %>"><span><%= t('leave_application') %></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="development_service">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h2><%= t('development_heading') %></h2>
+    </div>
+
+    <div class="col-sm-12">
+
+      <div class="col-sm-8 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('development_service_1') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('development_service_2') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('development_service_3') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('development_service_4') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('development_service_5') %>
+        </div>
+      </div>
+
+      <div class="col-sm-4 vcenter problems_block">
+        <%= image_tag "man_magic.png", class: "img-responsive man_image" %>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center small_top_margin">
+      <div class="col-sm-12">
+        <p class="solution_not_found">
+          <%= t('not_found_solution') %>
+          <br>
+          <%= t('leave_application_for_solution') %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('leave_application') %>"><span><%= t('leave_application') %></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit_service">
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <h2><%= t('audit_heading') %></h2>
+    </div>
+
+    <div class="col-sm-12">
+
+      <div class="col-sm-4 vcenter problems_block">
+        <%= image_tag "man_modal.png", class: "img-responsive man_image" %>
+      </div>
+
+      <div class="col-sm-8 vcenter problems_block">
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('audit_service_1') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('audit_service_2') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('audit_service_3') %>
+        </div>
+        <div class="col-sm-12 regular_text">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <%= t('audit_service_4') %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-12 text-center small_top_margin">
+      <div class="col-sm-12">
+        <p class="solution_not_found">
+          <%= t('not_found_solution') %>
+          <br>
+          <%= t('leave_application_for_solution') %>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 text-center">
+      <div class="btn-group">
+        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('leave_application') %>"><span><%= t('leave_application') %></span></a>
+      </div>
+    </div>
+  </div>
+</section>

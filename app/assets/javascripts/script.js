@@ -3,7 +3,6 @@ $(document).ready(function() {
   new WOW().init();
 
   $('.button_for_modal').on('click', function() {
-    console.log("dasdas");
 		var trigger = this.getAttribute("data-trigger");
     $('.modal_heading').text(trigger);
     $('.modal_trigger').val(trigger);
@@ -34,8 +33,6 @@ $(document).ready(function() {
       $('#thank_you_modal').modal('show');
 
   		return true;
-
-      $('.new_message').trigger("reset");
 		}
 		else {
 			return false;
