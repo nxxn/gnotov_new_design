@@ -63,7 +63,7 @@ class Admin::WorksController < AdminController
   private
 
     def work_params
-      params.require(:work).permit(:title, :url, :description, :department, :active, :order_number, :work_image, :lv, :ru, :en)
+      params.require(:work).permit(:title, :url, :description, :department, :en_department, :lv_department, :active, :order_number, :work_image, :lv, :ru, :en)
     end
 
 end

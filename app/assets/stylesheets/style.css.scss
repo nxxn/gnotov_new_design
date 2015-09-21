@@ -570,6 +570,20 @@ portfolio
   margin-bottom: 60px;
 }
 
+#portfolio .work_title {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+#portfolio .work_title a {
+  color: #333;
+}
+
+#portfolio .work_title a:hover {
+  color: #37b34a;
+  text-decoration: none;
+}
+
 @media (max-width: 1199px) {
   #portfolio .overlay .folio-detail .fa {
     font-size: 30px;
@@ -579,11 +593,6 @@ portfolio
   #portfolio .overlay .folio-detail .fa {
     font-size: 40px;
   }
-}
-
-.work_title {
-  margin-top: 15px;
-  font-size: 20px;
 }
 
 #contacts {

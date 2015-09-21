@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <div class="col-sm-6 text-center worker">
+      <div class="col-sm-6 text-center worker last_worker">
         <div class="col-sm-12">
           <%= image_tag "tonya.jpg", class: "img-responsive man_image" %>
         </div>
@@ -176,10 +176,12 @@
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           <%= t('solution_1') %>
         </div>
-        <div class="col-sm-12 regular_text">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-          <%= t('solution_2') %>
-        </div>
+        <% unless I18n.locale == :en %>
+          <div class="col-sm-12 regular_text">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <%= t('solution_2') %>
+          </div>
+        <% end %>
         <div class="col-sm-12 regular_text">
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           <%= t('solution_3') %>
@@ -207,10 +209,12 @@
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
           <%= t('solution_6') %>
         </div>
-        <div class="col-sm-12 regular_text">
-          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-          <%= t('solution_8') %>
-        </div>
+        <% unless I18n.locale == :en %>
+          <div class="col-sm-12 regular_text">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <%= t('solution_8') %>
+          </div>
+        <% end %>
       </div>
 
     </div>
@@ -285,7 +289,7 @@
     </div>
     <div class="col-sm-12 text-center small_top_margin">
       <div class="btn-group">
-        <a class="btn btn-default btn-custom button_for_modal" href="portfolio"><%= t('all_works') %></a>
+        <%= link_to t('all_works'), portfolio_path, class: "btn btn-default btn-custom button_for_modal" %>
       </div>
     </div>
   </div>

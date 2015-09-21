@@ -5,7 +5,9 @@
 
   <%= f.input :title, label: "Название"  %>
   <%= f.input :url, label: "Ссылка"  %>
-  <%= f.input :department, label: "О компании" %>
+  <%= f.input :department, label: "О компании RU" %>
+  <%= f.input :en_department, label: "О компании EN" %>
+  <%= f.input :lv_department, label: "О компании LV" %>
   <%= f.input :description, label: "Описание", as: :text  %>
   <% if @work.work_image.present? %>
     <%= image_tag @work.work_image.url(:medium), alt: "Main image" %>
