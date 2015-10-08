@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 		if (is_email && is_message) {
 			$('.modal').modal('hide');
-
+      yaCounter32708185.reachGoal('application');
       $('#thank_you_modal').modal('show');
 
   		return true;
