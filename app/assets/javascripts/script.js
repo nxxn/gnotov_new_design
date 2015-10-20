@@ -39,6 +39,27 @@ $(document).ready(function() {
 		}
 	});
 
+  $('.new_direct_order').on('submit', function() {
+		var input_email=$(this).find('.form_email');
+		var is_email=input_email.val();
+		if ( is_email ) {
+			input_email.removeClass("invalid").addClass("valid");
+		}
+		else {
+			input_email.removeClass("valid").addClass("invalid");
+		}
+		if ( is_email ) {
+			$('.modal').modal('hide');
+      yaCounter32708185.reachGoal('application');
+      $('#thank_you_modal').modal('show');
+
+  		return true;
+		}
+		else {
+			return false;
+		}
+	});
+
   $(".fancybox").fancybox({
     padding: 0,
 	  helpers : {

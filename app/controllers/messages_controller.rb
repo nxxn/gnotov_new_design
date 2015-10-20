@@ -7,7 +7,8 @@ class MessagesController < ApplicationController
     if @message.save
       ContactFormMailer.new_contact_form_message(@message).deliver_later
       #ContactFormMailer.auto_message_to_client(params[:email], I18n.locale.to_s).deliver_later
-      render :js=>"$('.new_message')[0].reset();"
+      #render :js=>"$('.new_message')[0].reset();"
+      render :js=>"$('form').each(function() { this.reset() });"
     end
 
   end

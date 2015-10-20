@@ -4,9 +4,12 @@ ru:
   services: "Наши услуги"
   works: "Примеры работ"
   contacts: "Контакты"
+  menu_direct: "Яндекс Директ"
   home: "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>"
   contact_us: "Остались вопросы? Напиши нам"
   messages: "Сообщения"
+  price: "Подробнее о ценах"
+  order: "Заказать"
 
   # Contact us form
   email: "Ваш емаил"
@@ -24,15 +27,21 @@ ru:
   alina: "Алина"
   marketing: "Продвижение сайтов"
   write_to_worker: "Получить консультацию"
-  team_description: "Мы маленькая, сплочённая команда которая решит ваши проблемы. Мы занимаемся созданием сайтов, разработкой landing page, контекстной рекламой, увеличиваем конверсию, делаем продающие сайты."
+  team_description: "Мы маленькая, сплочённая команда, которая решит ваши проблемы. Мы занимаемся созданием сайтов, разработкой landing page, контекстной рекламой, увеличиваем конверсию, делаем продающие сайты."
 
   problems_heading: "Каждый день вы сталкиваетесь с проблемами"
   problem_1: "Мало клиентов"
   problem_2: "Нет продаж"
   problem_3: "Реклама не окупается"
+
   problem_4: "Сайт долго грузиться"
   problem_5: "Нужен редизайн"
   problem_6: "Нужен свежий взгляд"
+
+  problem_direct_1: "Высокая цена клика"
+  problem_direct_2: "Высокая стоимость клиента"
+  problem_direct_3: "Большая конкуренция"
+
   solve_problems: "Хочу решить проблемы"
 
   solution_heading: "Мы предлагаем решение проблем"
@@ -44,6 +53,12 @@ ru:
   solution_6: "Оптимизация для поисковых систем"
   solution_7: "Аудит сайта"
   solution_8: "Создание рекламной кампании"
+
+  solution_direct_1: "Начиная с 5000 объявлений"
+  solution_direct_2: "Цена клика от 5 рублей"
+  solution_direct_3: "Огромное количество переходов"
+  solution_direct_4: "Снижение затрат на рекламу"
+
   not_found_solution: "Не нашли что-то в списке?"
   leave_application_for_solution: "Оставьте заявку и мы свяжемся с вами и обсудим возможности решения вашей задачи"
   leave_application: "Оставить заявку"
@@ -62,7 +77,7 @@ ru:
   write_to_alina: "Написать Алине"
 
   magical_button: "Волшебная кнопка"
-  magical_form: "Волшебная форма"
+  magical_form: "Волшебство случилось!"
   magical_text: "Заявка с этой формы гарантирует Вам скидку 10%!"
 
   home_title: "Мы готовы помочь тебе создать сайт"
@@ -83,7 +98,7 @@ ru:
   development_heading: "Разработка сайта"
   audit_heading: "Аудит сайта"
 
-  promotion_service_1: "Разработка рекламной кампании для Яндекс Директа или Google AdWords"
+  promotion_service_1: "Разработка рекламной кампании для Яндекс Директа"
   promotion_service_2: "Сборка семантического ядра запросов"
   promotion_service_3: "Составление уникальных объявлений для кампании"
   promotion_service_4: "Настройка Яндекс Метрики и Google Analytics"
@@ -105,6 +120,42 @@ ru:
   we_will_help: "Мы поможем Вам решить проблемы"
 
   take_a_look: "Посмотреть"
+
+  direct_description: "Мы создаем рекламные кампании с низкой ценой клика, большим количеством ключевых слов. <br> И обеспечиваем Вам полный охват целевой аудитории!"
+
+  direct_prices_heading: "Стоимость настройки Яндекс Директ"
+  direct_prices_monthly_heading: "Ведение рекламной кампании"
+
+  direct_keywords: "ключевиков"
+  direct_plan_1: "Стартап"
+  direct_plan_2: "Бизнес"
+  direct_plan_3: "Корпорация"
+  direct_audit: "Аудит сайта"
+  direct_recomendations: "Рекомендации по сайту"
+  direct_free: "Бесплатное ведение"
+  direct_utm: "UTM метки"
+  direct_quick_links: "Быстрые ссылки"
+  direct_analyse: "Анализ конкурентов"
+  direct_rsa: "Реклама в РСЯ"
+  direct_metrics: "Настройка Яндекс.Метрики"
+  direct_mind_map: "Mind map запросов"
+  direct_work_time: "Время изготовления"
+  direct_price: "Стоимость"
+  direct_rub: "руб."
+  direct_day: "дня"
+  direct_days: "дней"
+  direct_week: "неделя"
+  direct_weeks: "недели"
+  direct_month: "месяц"
+  direct_months: "месяца"
+
+  direct_plan_1_modal: 'Заказать план "Стартап"'
+  direct_plan_2_modal: 'Заказать план "Бизнес"'
+  direct_plan_3_modal: 'Заказать план "Корпорация"'
+
+  direct_modal_text: "Остаьте заявку и мы свяжемся с Вами <br> для уточнения деталей!"
+
+  comment: "Комментарий"
 
   #i18n default
 

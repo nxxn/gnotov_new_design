@@ -6,6 +6,10 @@ input.invalid, textarea.invalid {
   border: 2px solid red !important;
 }
 
+.with_background {
+  background-color: #f5f5f5;
+}
+
 .green_separator {
   width: 100px;
   height: 3px;
@@ -172,7 +176,7 @@ nav .navbar-toggle .icon-bar {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .collapsed_menu_container {
-    width: 72%;
+    width: 100%;
   }
 
   .collapsed_menu_container .btn-group {
@@ -180,17 +184,17 @@ nav .navbar-toggle .icon-bar {
   }
 
   .locale_navbar_container {
-    width: 28%;
+    display: none;
   }
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .collapsed_menu_container {
-    width: 54%;
+    width: 75%;
   }
 
   .locale_navbar_container {
-    width: 21%;
+    display: none;
   }
 }
 
@@ -883,7 +887,7 @@ footer .copyright {
   z-index: 999;
 }
 
-#thank_you_modal h2, #magical_modal h2 {
+#thank_you_modal h2, #magical_modal h2, #direct_modal h2 {
   margin-bottom: 10px;
 }
 
@@ -894,10 +898,38 @@ footer .copyright {
   margin-bottom: 20px;
 }
 
+#direct_modal .modal_thanks_soon {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 #promotion_service h2, #development_service h2, #audit_service h2 {
   margin-bottom: 30px;
 }
 
 #development_service {
   background-color: #f5f5f5;
+}
+
+.direct_solutions .green_separator {
+  margin-bottom: 0px;
+}
+
+.direct_solutions h3 {
+  margin-top: 0px;
+}
+
+.direct_solutions h1 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.direct_solutions .team_description h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
 }

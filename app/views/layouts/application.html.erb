@@ -52,12 +52,15 @@
             <% end %>
           </div>
 
-          <div class="col-sm-6 collapsed_menu_container">
+          <div class="col-sm-7 collapsed_menu_container">
             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse text-center">
               <div class="btn-group">
                 <ul id="menu-top" class="nav navbar-nav navbar-left">
                   <li><%= link_to t('home').html_safe, root_path, class: "#{params[:action] == 'index' ? 'active' : ''}" %></li>
                   <li><%= link_to t('services'), services_path, class: "#{params[:action] == 'services' ? 'active' : ''}" %></li>
+                  <% unless I18n.locale == :en %>
+                    <li><%= link_to t('menu_direct'), yandex_direct_path, class: "#{params[:action] == 'contacts' ? 'active' : ''}" %></li>
+                  <% end %>
                   <li><%= link_to t('works'), portfolio_path, class: "#{params[:action] == 'works' ? 'active' : ''}" %></li>
                   <li><%= link_to t('contacts'), contacts_path, class: "#{params[:action] == 'contacts' ? 'active' : ''}" %></li>
                 </ul>
@@ -65,7 +68,7 @@
             </div>
           </div>
 
-          <div class="col-sm-3 locale_navbar_container">
+          <div class="col-sm-2 locale_navbar_container">
             <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse ">
               <ul class="nav navbar-nav navbar-right locale_navbar">
                 <!-- <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li> -->
@@ -227,6 +230,47 @@
                 <div class="form-group">
                   <label for="messagearea"><%= t('message') %></label>
                   <%= f.input :message, label: false, :input_html => { class: "form-control form_message", placeholder: t('message'), rows: 3, name: "message" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <button type="submit" name="submitButton" class="btn btn-custom btn-default"><%= t('send') %></button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="direct_modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="modal_close_button" data-dismiss="modal"></span>
+          <!-- The form is placed inside the body of modal -->
+          <div class="col-sm-12 text-center">
+            <h2 class="modal_heading"><%= t('magical_form') %></h2>
+            <div class="modal_thanks_soon">
+              <%= t('direct_modal_text').html_safe %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <%= image_tag "man_modal.png", class: "img-responsive man_image" %>
+          </div>
+          <div class="col-sm-6">
+            <%= simple_form_for @message, url: new_contact_message_path, html: { class: 'new_direct_order' }, remote: true do |f| %>
+              <%= f.input :trigger_button, input_html: { class: "modal_trigger", name: "trigger_button" }, as: :hidden %>
+              <%= f.input :referrer, input_html: { value: session[:refererral_user], class: "referrer", name: "referrer" }, as: :hidden %>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="emailaddress"><%= t('email') %></label>
+                  <%= f.input :email, label: false, :input_html => { class: "form-control form_email", placeholder: t('email'), type: "email", name: "email" }  %>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="messagearea"><%= t('comment') %></label>
+                  <%= f.input :message, label: false, :input_html => { class: "form-control", placeholder: t('comment'), rows: 3, name: "message" }  %>
                 </div>
               </div>
               <div class="col-sm-12">

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get '/portfolio', to: 'home#works'
     get '/contacts', to: 'home#contacts'
     get '/services', to: 'home#services'
+    get '/yandex-direct', to: 'home#yandex_direct'
 
     root to: "home#index"
   end
