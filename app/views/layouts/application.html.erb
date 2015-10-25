@@ -61,7 +61,7 @@
                   <li><%= link_to t('home').html_safe, root_path, class: "#{params[:action] == 'index' ? 'active' : ''}" %></li>
                   <li><%= link_to t('services'), services_path, class: "#{params[:action] == 'services' ? 'active' : ''}" %></li>
                   <% unless I18n.locale == :en %>
-                    <li><%= link_to t('menu_direct'), yandex_direct_path, class: "#{params[:action] == 'contacts' ? 'active' : ''}" %></li>
+                    <li><%= link_to t('menu_direct'), yandex_direct_path, class: "#{params[:action] == 'yandex_direct' ? 'active' : ''}" %></li>
                   <% end %>
                   <li><%= link_to t('works'), portfolio_path, class: "#{params[:action] == 'works' ? 'active' : ''}" %></li>
                   <li><%= link_to t('contacts'), contacts_path, class: "#{params[:action] == 'contacts' ? 'active' : ''}" %></li>
