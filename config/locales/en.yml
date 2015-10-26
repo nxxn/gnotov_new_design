@@ -52,6 +52,8 @@ en:
   contacts_heading: "Hello! <br> Using form below you can easily contact us."
   service_heading: "We offer"
 
+  link_to_services: "More info about our offer"
+
   thanks_for_application: "Thank you for application"
   we_will_respond_soon: "We will contact you soon!"
 
@@ -94,7 +96,7 @@ en:
   development_service_1: "Creating a website for your business"
   development_service_2: "Developing responsive design for every device"
   development_service_3: "Creating landing pages for new products etc."
-  development_service_4: "Improving the existing website, page load time optimization"
+  development_service_4: "Improving the your website, page load time optimization"
   development_service_5: "Redesign, adding places for customer capture "
 
   audit_service_1: "Technical website audit for errors"

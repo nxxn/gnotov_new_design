@@ -7,7 +7,7 @@
        }
 %>
 <% unless I18n.locale == :en %>
-  <section id="promotion_service">
+  <section id="promotion_service" class="fixed_menu_margin">
     <div class="container">
       <div class="col-sm-12 text-center">
         <h1><%= t('service_heading') %></h1>
@@ -68,8 +68,21 @@
   </section>
 <% end %>
 
-<section id="development_service">
+<% if I18n.locale == :en %>
+  <section id="development_service" class="fixed_menu_margin">
+<% else %>
+  <section id="development_service">
+<% end %>
+
   <div class="container">
+
+    <div class="col-sm-12 text-center">
+      <h1><%= t('service_heading') %></h1>
+      <div class="btn-group">
+        <div class="green_separator"></div>
+      </div>
+    </div>
+
     <div class="col-sm-12 text-center">
       <h2><%= t('development_heading') %></h2>
     </div>

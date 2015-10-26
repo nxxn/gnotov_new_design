@@ -7,7 +7,7 @@
        }
 %>
 
-<section id="greeting">
+<section id="greeting" class="fixed_menu_margin">
   <div class="container">
     <div class="col-sm-12">
       <div class="col-sm-4 vcenter top_image">
@@ -144,7 +144,9 @@
 
     <div class="col-sm-12 text-center">
       <div class="btn-group">
-        <a class="btn btn-default btn-custom button_for_modal" href="#" data-toggle="modal" data-target="#worker_modal" data-trigger="<%= t('solve_problems') %>"><span><%= t('solve_problems') %></span></a>
+        <%= link_to services_path, class: "btn btn-default btn-custom button_for_modal" do %>
+          <span><%= t('link_to_services') %></span>
+        <% end %>
       </div>
     </div>
   </div>
