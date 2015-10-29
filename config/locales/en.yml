@@ -5,7 +5,7 @@ en:
   works: "Portfolio"
   contacts: "Contacts"
   home: "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>"
-  contact_us: "Have a question? Contact us"
+  contact_us: "Have a question? Contact us!"
   messages: "Messages"
 
   # Contact us form
@@ -78,6 +78,10 @@ en:
 
   services_title: "We will help you to improve your business"
   services_desctiption: "Development of advertising companies, the creation of responsive design, website audit."
+
+  contacts_our_contacts: "Our contacts"
+  contacts_our_page: "our page"
+  contacts_fill_form: "Or fill form below"
 
   all_works: "Take a look at our portfolio"
 

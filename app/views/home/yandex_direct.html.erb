@@ -1,3 +1,12 @@
+<%
+  meta title: "#{t('yandex_title')}",
+       description: "#{t('yandex_desctiption')}",
+       og: {
+        title: "#{t('yandex_title')}",
+        description: "#{t('yandex_desctiption')}"
+       }
+%>
+
 <section id="solution" class="with_background direct_solutions fixed_menu_margin">
   <div class="container">
     <div class="col-sm-12 text-center">
@@ -181,9 +190,9 @@
 
           <tr>
             <th scope="row"><%= t('direct_price') %></th>
-            <td><span class="green_text"><strong>25 000 <%= t('direct_rub') %></strong></span></td>
-            <td><span class="green_text"><strong>50 000 <%= t('direct_rub') %></strong></span></td>
-            <td><span class="green_text"><strong>100 000 <%= t('direct_rub') %></strong></span></td>
+            <td><span class="green_text"><strong class="direct_price_first">25 000 <%= t('direct_rub') %></strong></span></td>
+            <td><span class="green_text"><strong class="direct_price_second">50 000 <%= t('direct_rub') %></strong></span></td>
+            <td><span class="green_text"><strong class="direct_price_third">100 000 <%= t('direct_rub') %></strong></span></td>
           </tr>
 
           <tr>

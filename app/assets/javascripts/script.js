@@ -1,6 +1,26 @@
 $(document).ready(function() {
 
-  new WOW().init();
+  //The callback function executed when the location is fetched successfully.
+  function onGeoSuccess(location) {
+    // $('form').append('<input type="hidden" name="geo" class="service" value="' + location.address.country + ' - ' + location.address.city + '">');
+
+    if ( location.address.country === "Russia" ) {
+      $('.direct_price_first').text("25 000 руб.");
+      $('.direct_price_second').text("50 000 руб.");
+      $('.direct_price_third').text("100 000 руб.");
+    }
+    else {
+      $('.direct_price_first').text("350 EUR");
+      $('.direct_price_second').text("700 EUR");
+      $('.direct_price_third').text("1400 EUR");
+    }
+  }
+  //The callback function executed when the location could not be fetched.
+  function onGeoError(error) {
+     console.log(error);
+  }
+
+  geolocator.locateByIP(onGeoSuccess, onGeoError, 2, null);
 
   $('.button_for_modal').on('click', function() {
 		var trigger = this.getAttribute("data-trigger");

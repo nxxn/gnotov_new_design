@@ -10,11 +10,30 @@
 <section id="greeting" class="fixed_menu_margin">
   <div class="container">
     <div class="col-sm-12">
-      <div class="col-sm-5 vcenter top_image">
+      <div class="col-sm-5  top_image">
         <%= image_tag "man_hi.png", class: "img-responsive man_image" %>
       </div>
-      <div class="col-sm-7 vcenter top_heading">
+      <!-- <div class="col-sm-7 vcenter top_heading">
         <%= t('contacts_heading').html_safe %>
+      </div> -->
+
+      <div class="col-sm-7 ">
+        <div class="">
+          <h2 class=""><%= t('contacts_our_contacts').html_safe %>:</h2>
+          <div class="h4 half_small_top_margin">
+            <strong class="green_text">WhatsApp, Viber, Telegram:</strong> +371 26659556
+          </div>
+          <div class="h4 half_small_top_margin">
+            <strong class="green_text">Facebook:</strong> <a href="http://facebook.com/gnotov"><%= t('contacts_our_page').html_safe %></a>
+          </div>
+          <div class="h4 half_small_top_margin">
+            <strong class="green_text">Email:</strong> <a href="mailto:info@gnotov.com">info@gnotov.com</a>
+          </div>
+          <div class="h4 half_small_top_margin">
+            <%= t('contacts_fill_form').html_safe %> <i class="fa fa-arrow-down"></i>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
