@@ -4,7 +4,7 @@ $(document).ready(function() {
   function onGeoSuccess(location) {
     // $('form').append('<input type="hidden" name="geo" class="service" value="' + location.address.country + ' - ' + location.address.city + '">');
 
-    if ( location.address.country === "Russia" ) {
+    if ( location.address.country === "Russia" || location.address.country === "Russian Federation" ) {
       $('.direct_price_first').text("25 000 руб.");
       $('.direct_price_second').text("50 000 руб.");
       $('.direct_price_third').text("100 000 руб.");
