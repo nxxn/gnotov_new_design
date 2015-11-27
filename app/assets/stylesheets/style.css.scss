@@ -6,6 +6,20 @@ input.invalid, textarea.invalid {
   border: 2px solid red !important;
 }
 
+.five_px_top_padding {
+  padding-top: 4px;
+}
+
+.twenty_px_top_padding {
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .twenty_px_top_padding {
+    padding-top: 0px;
+  }
+}
+
 .fixed_menu_margin {
   margin-top: 64px;
 }
@@ -66,6 +80,10 @@ input.invalid, textarea.invalid {
 
 .green_text {
   color: #37b34a;
+}
+
+.blue_text {
+  color: #337ab7;
 }
 
 section {
@@ -138,13 +156,14 @@ p {
 nav .navbar-toggle {
   border-color: #37b34a;
   border-radius: 0px;
+  margin-top: 20px;
 }
 
 nav .navbar-toggle .icon-bar {
   background-color: #37b34a;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1000px) {
   .logo_container {
     float: left;
     display: none;
@@ -153,6 +172,28 @@ nav .navbar-toggle .icon-bar {
 
 .locale_navbar_mobile {
   display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
+  .nav > li {
+    float: none !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -179,17 +220,23 @@ nav .navbar-toggle .icon-bar {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1000px) {
   .collapsed_menu_container {
     width: 100%;
   }
 
-  .collapsed_menu_container .btn-group {
-    display: block;
-  }
+  // .collapsed_menu_container .btn-group {
+  //   display: block;
+  // }
 
   .locale_navbar_container {
     display: none;
+  }
+
+  .locale_navbar_mobile {
+    display: block;
+    float: left;
+    margin-left: 7px;
   }
 }
 
@@ -198,7 +245,7 @@ nav .navbar-toggle .icon-bar {
     width: 75%;
   }
 
-  .locale_navbar_container {
+  .logo_container {
     display: none;
   }
 }
@@ -209,9 +256,9 @@ nav .navbar-toggle .icon-bar {
     border-bottom: 2px solid #F3F3F3;
   }
 
-  .collapsed_menu_container .collapse {
-    display: block !important;
-  }
+  // .collapsed_menu_container .collapse {
+  //   display: block !important;
+  // }
 }
 
 // Navigation end
@@ -630,11 +677,11 @@ portfolio
 }
 
 #contacts .contacts_email a {
-  color: #fff;
+  color: #37b34a;
 }
 
 #contacts .contacts_email a:hover {
-  color: #37b34a;
+  color: #fff;
   text-decoration: none;
 }
 

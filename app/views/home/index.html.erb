@@ -276,7 +276,7 @@
               </div>
 
               <div class="col-sm-12 regular_text work_title">
-                <strong><%= link_to work.title, "http://#{work.url}" %></strong>
+                <strong><%= link_to work.title, "http://#{work.url}", target: "blank" %></strong>
               </div>
               <div class="col-sm-12 regular_text work_department">
                 <% if I18n.locale == :ru %>
